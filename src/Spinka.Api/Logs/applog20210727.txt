@@ -1,0 +1,223 @@
+2021-07-27 08:38:25 | Information | CorrelationId: 2d09a28f-0d2a-4bac-b420-4095dd1694ad | RequestId: 0HMAGP4HB6VPV:00000001 | RequestPath: /swagger/index.html | RequestMethod: GET | RequestQuery: [] | RequestContentLength: null | RequestContentType: null | User: { IsAuthenticated = False, AuthenticationType = , UserName =  } | MachineName: LAPTOP-65MSIL4C | ElapsedMilliseconds: 51 | Spinka.Api.Middlewares.LoggerMiddleware
+ Request completed
+2021-07-27 08:38:25 | Information | CorrelationId: 2f9a6f31-ae74-4b2e-9283-2eecb7e5f7ff | RequestId: 0HMAGP4HB6VPV:00000003 | RequestPath: /swagger/swagger-ui.css | RequestMethod: GET | RequestQuery: [] | RequestContentLength: null | RequestContentType: null | User: { IsAuthenticated = False, AuthenticationType = , UserName =  } | MachineName: LAPTOP-65MSIL4C | ElapsedMilliseconds: 68 | Spinka.Api.Middlewares.LoggerMiddleware
+ Request completed
+2021-07-27 08:38:25 | Information | CorrelationId: 2f66aa9d-2ae4-4698-9f60-63b9960818f3 | RequestId: 0HMAGP4HB6VPV:00000007 | RequestPath: /swagger/swagger-ui-standalone-preset.js | RequestMethod: GET | RequestQuery: [] | RequestContentLength: null | RequestContentType: null | User: { IsAuthenticated = False, AuthenticationType = , UserName =  } | MachineName: LAPTOP-65MSIL4C | ElapsedMilliseconds: 68 | Spinka.Api.Middlewares.LoggerMiddleware
+ Request completed
+2021-07-27 08:38:25 | Information | CorrelationId: f1ec2381-c46d-428e-89e2-8594a7d07d74 | RequestId: 0HMAGP4HB6VPV:00000005 | RequestPath: /swagger/swagger-ui-bundle.js | RequestMethod: GET | RequestQuery: [] | RequestContentLength: null | RequestContentType: null | User: { IsAuthenticated = False, AuthenticationType = , UserName =  } | MachineName: LAPTOP-65MSIL4C | ElapsedMilliseconds: 77 | Spinka.Api.Middlewares.LoggerMiddleware
+ Request completed
+2021-07-27 08:38:25 | Information | CorrelationId: 3190d983-d8bf-4747-96bf-e4938bffbcbe | RequestId: 0HMAGP4HB6VPV:0000000B | RequestPath: /swagger/favicon-32x32.png | RequestMethod: GET | RequestQuery: [] | RequestContentLength: null | RequestContentType: null | User: { IsAuthenticated = False, AuthenticationType = , UserName =  } | MachineName: LAPTOP-65MSIL4C | ElapsedMilliseconds: 1 | Spinka.Api.Middlewares.LoggerMiddleware
+ Request completed
+2021-07-27 08:38:25 | Information | CorrelationId: a9b6b791-1ff8-437e-872e-6c281bd11ebd | RequestId: 0HMAGP4HB6VPV:00000009 | RequestPath: /swagger/v1/swagger.json | RequestMethod: GET | RequestQuery: [] | RequestContentLength: null | RequestContentType: null | User: { IsAuthenticated = False, AuthenticationType = , UserName =  } | MachineName: LAPTOP-65MSIL4C | ElapsedMilliseconds: 205 | Spinka.Api.Middlewares.LoggerMiddleware
+ Request completed
+2021-07-27 09:24:16 | Fatal | CorrelationId:  | RequestId:  | RequestPath:  | RequestMethod:  | RequestQuery:  | RequestContentLength:  | RequestContentType:  | User:  | MachineName:  | ElapsedMilliseconds:  | Microsoft.AspNetCore.Hosting.Diagnostics
+ Application startup exception
+System.AggregateException: One or more errors occurred. (An error occurred while updating the entries. See the inner exception for details.)
+ ---> Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The MERGE statement conflicted with the FOREIGN KEY constraint "FK_DayReps_DayRepGroupPersons_DayRepGroupPersonId". The conflict occurred in database "Spinka", table "dbo.DayRepGroupPersons", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__164_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:50d911b8-e9a0-44b3-949a-a1858b442382
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Spinka.Infrastructure.Database.DatabaseInitializer.SeedData(SpinkaContext context) in C:\Users\snoww\Documents\GitHub\Spinka\spinka_backend\spinka\src\Spinka.Infrastructure\Database\DatabaseInitializer.cs:line 180
+   at Spinka.Infrastructure.Database.DatabaseInitializer.PrepPopulation(IApplicationBuilder app) in C:\Users\snoww\Documents\GitHub\Spinka\spinka_backend\spinka\src\Spinka.Infrastructure\Database\DatabaseInitializer.cs:line 20
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at Spinka.Api.Startup.Configure(IApplicationBuilder app, IWebHostEnvironment env) in C:\Users\snoww\Documents\GitHub\Spinka\spinka_backend\spinka\src\Spinka.Api\Startup.cs:line 57
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.Invoke(Object instance, IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.<>c__DisplayClass4_0.<Build>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostBuilder.<>c__DisplayClass13_0.<UseStartup>b__2(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Mvc.Filters.MiddlewareFilterBuilderStartupFilter.<>c__DisplayClass0_0.<Configure>g__MiddlewareFilterBuilder|0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.HostFilteringStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+2021-07-27 09:27:01 | Fatal | CorrelationId:  | RequestId:  | RequestPath:  | RequestMethod:  | RequestQuery:  | RequestContentLength:  | RequestContentType:  | User:  | MachineName:  | ElapsedMilliseconds:  | Microsoft.AspNetCore.Hosting.Diagnostics
+ Application startup exception
+System.AggregateException: One or more errors occurred. (An error occurred while updating the entries. See the inner exception for details.)
+ ---> Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The MERGE statement conflicted with the FOREIGN KEY constraint "FK_DayRepGroupPersons_Persons_PersonId". The conflict occurred in database "Spinka", table "dbo.Persons", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__164_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:5bdc7aab-e945-4359-a641-d73174f8971b
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Spinka.Infrastructure.Database.DatabaseInitializer.SeedData(SpinkaContext context) in C:\Users\snoww\Documents\GitHub\Spinka\spinka_backend\spinka\src\Spinka.Infrastructure\Database\DatabaseInitializer.cs:line 180
+   at Spinka.Infrastructure.Database.DatabaseInitializer.PrepPopulation(IApplicationBuilder app) in C:\Users\snoww\Documents\GitHub\Spinka\spinka_backend\spinka\src\Spinka.Infrastructure\Database\DatabaseInitializer.cs:line 20
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at Spinka.Api.Startup.Configure(IApplicationBuilder app, IWebHostEnvironment env) in C:\Users\snoww\Documents\GitHub\Spinka\spinka_backend\spinka\src\Spinka.Api\Startup.cs:line 57
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.Invoke(Object instance, IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.<>c__DisplayClass4_0.<Build>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostBuilder.<>c__DisplayClass13_0.<UseStartup>b__2(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Mvc.Filters.MiddlewareFilterBuilderStartupFilter.<>c__DisplayClass0_0.<Configure>g__MiddlewareFilterBuilder|0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.HostFilteringStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+2021-07-27 09:56:44 | Information | CorrelationId: 8e39e971-67c4-44ac-ae04-05b07c00ba79 | RequestId: 0HMAGQG9E5HGA:00000001 | RequestPath: /api/TrainingLog/ByEduBlock/3 | RequestMethod: GET | RequestQuery: [] | RequestContentLength: null | RequestContentType: null | User: { IsAuthenticated = False, AuthenticationType = , UserName =  } | MachineName: LAPTOP-65MSIL4C | ElapsedMilliseconds: 1478 | Spinka.Api.Middlewares.LoggerMiddleware
+ Request completed
+2021-07-27 09:56:58 | Information | CorrelationId: c48ed14d-f1a7-47db-a371-72462a999d2c | RequestId: 0HMAGQG9E5HGA:00000003 | RequestPath: /api/TrainingLog/ByEduBlock/5 | RequestMethod: GET | RequestQuery: [] | RequestContentLength: null | RequestContentType: null | User: { IsAuthenticated = False, AuthenticationType = , UserName =  } | MachineName: LAPTOP-65MSIL4C | ElapsedMilliseconds: 851 | Spinka.Api.Middlewares.LoggerMiddleware
+ Request completed
+2021-07-27 09:57:26 | Information | CorrelationId: fefe1368-406d-4f1d-9926-8a828a3823c1 | RequestId: 0HMAGQG9E5HGA:00000005 | RequestPath: /api/TrainingLog/ByGroupId | RequestMethod: POST | RequestQuery: [] | RequestContentLength: 86 | RequestContentType: application/json | User: { IsAuthenticated = False, AuthenticationType = , UserName =  } | MachineName: LAPTOP-65MSIL4C | ElapsedMilliseconds: 22 | Spinka.Api.Middlewares.LoggerMiddleware
+ Request completed
+2021-07-27 09:57:38 | Information | CorrelationId: 02599ebb-4109-44aa-a47b-5013da8a9d39 | RequestId: 0HMAGQG9E5HGA:00000007 | RequestPath: /api/TrainingLog/ByGroupId | RequestMethod: POST | RequestQuery: [] | RequestContentLength: 87 | RequestContentType: application/json | User: { IsAuthenticated = False, AuthenticationType = , UserName =  } | MachineName: LAPTOP-65MSIL4C | ElapsedMilliseconds: 29 | Spinka.Api.Middlewares.LoggerMiddleware
+ Request completed
+2021-07-27 09:57:43 | Information | CorrelationId: 54359e93-04da-4b41-b956-cc30790c61af | RequestId: 0HMAGQG9E5HGA:00000009 | RequestPath: /api/TrainingLog/ByGroupId | RequestMethod: POST | RequestQuery: [] | RequestContentLength: 87 | RequestContentType: application/json | User: { IsAuthenticated = False, AuthenticationType = , UserName =  } | MachineName: LAPTOP-65MSIL4C | ElapsedMilliseconds: 7 | Spinka.Api.Middlewares.LoggerMiddleware
+ Request completed
+2021-07-27 09:57:54 | Information | CorrelationId: b120b99a-8352-4500-af6b-9331568e96b6 | RequestId: 0HMAGQG9E5HGA:0000000B | RequestPath: /api/TrainingLog/ByGroupId | RequestMethod: POST | RequestQuery: [] | RequestContentLength: 87 | RequestContentType: application/json | User: { IsAuthenticated = False, AuthenticationType = , UserName =  } | MachineName: LAPTOP-65MSIL4C | ElapsedMilliseconds: 21 | Spinka.Api.Middlewares.LoggerMiddleware
+ Request completed
+2021-07-27 09:58:00 | Information | CorrelationId: 2f2f757c-209d-4490-946d-cf0e891669da | RequestId: 0HMAGQG9E5HGA:0000000D | RequestPath: /api/TrainingLog/ByGroupId | RequestMethod: POST | RequestQuery: [] | RequestContentLength: 87 | RequestContentType: application/json | User: { IsAuthenticated = False, AuthenticationType = , UserName =  } | MachineName: LAPTOP-65MSIL4C | ElapsedMilliseconds: 9 | Spinka.Api.Middlewares.LoggerMiddleware
+ Request completed
+2021-07-27 10:23:11 | Information | CorrelationId: 4f3984ea-76b7-4d8c-a2fb-8d23441c1f2a | RequestId: 0HMAGQG9E5HGC:00000001 | RequestPath: /api/TrainingLog/ByEduBlock/5 | RequestMethod: GET | RequestQuery: [] | RequestContentLength: null | RequestContentType: null | User: { IsAuthenticated = False, AuthenticationType = , UserName =  } | MachineName: LAPTOP-65MSIL4C | ElapsedMilliseconds: 31 | Spinka.Api.Middlewares.LoggerMiddleware
+ Request completed
+2021-07-27 10:23:22 | Information | CorrelationId: c15ff484-3540-4782-9305-ceb3262e882c | RequestId: 0HMAGQG9E5HGC:00000003 | RequestPath: /api/TrainingLog/ByEduBlock/2 | RequestMethod: GET | RequestQuery: [] | RequestContentLength: null | RequestContentType: null | User: { IsAuthenticated = False, AuthenticationType = , UserName =  } | MachineName: LAPTOP-65MSIL4C | ElapsedMilliseconds: 735 | Spinka.Api.Middlewares.LoggerMiddleware
+ Request completed
+2021-07-27 10:32:33 | Information | CorrelationId: 9cb06513-f271-4036-875d-1b8d3c58faff | RequestId: 0HMAGR4A2O00L:00000001 | RequestPath: /api/TrainingLog/ByGroupId | RequestMethod: POST | RequestQuery: [] | RequestContentLength: 87 | RequestContentType: application/json | User: { IsAuthenticated = False, AuthenticationType = , UserName =  } | MachineName: LAPTOP-65MSIL4C | ElapsedMilliseconds: 376 | Spinka.Api.Middlewares.LoggerMiddleware
+ Request completed
+2021-07-27 10:55:27 | Information | CorrelationId: 779c8630-b0e4-4406-b00e-3edd1c75f757 | RequestId: 0HMAGRH3ME106:00000001 | RequestPath: /api/EduBlock/2 | RequestMethod: GET | RequestQuery: [] | RequestContentLength: null | RequestContentType: null | User: { IsAuthenticated = False, AuthenticationType = , UserName =  } | MachineName: LAPTOP-65MSIL4C | ElapsedMilliseconds: 434 | Spinka.Api.Middlewares.LoggerMiddleware
+ Request completed
+2021-07-27 10:55:38 | Error | CorrelationId: 505dcb5a-a6eb-4b4e-a89c-8857b2109891 | RequestId: 0HMAGRH3ME106:00000003 | RequestPath: /api/EduBlock | RequestMethod: GET | RequestQuery: [] | RequestContentLength: null | RequestContentType: null | User: { IsAuthenticated = False, AuthenticationType = , UserName =  } | MachineName: LAPTOP-65MSIL4C | ElapsedMilliseconds: 78 | Spinka.Api.Middlewares.LoggerMiddleware
+ An exception was thrown while attempting to evaluate a LINQ query parameter expression. To show additional information call EnableSensitiveDataLogging() when overriding DbContext.OnConfiguring.
+2021-07-27 10:59:21 | Error | CorrelationId: 89925eb4-a669-4267-b9b1-1c8c79f99050 | RequestId: 0HMAGRJ9CD9CH:00000001 | RequestPath: /api/EduBlock | RequestMethod: GET | RequestQuery: [] | RequestContentLength: null | RequestContentType: null | User: { IsAuthenticated = False, AuthenticationType = , UserName =  } | MachineName: LAPTOP-65MSIL4C | ElapsedMilliseconds: 296 | Spinka.Api.Middlewares.LoggerMiddleware
+ An exception was thrown while attempting to evaluate a LINQ query parameter expression. To show additional information call EnableSensitiveDataLogging() when overriding DbContext.OnConfiguring.
+2021-07-27 10:59:26 | Error | CorrelationId: 5ff7a1b2-d8bb-4ab8-98c0-2cac50bdb500 | RequestId: 0HMAGRJ9CD9CH:00000003 | RequestPath: /api/EduBlock | RequestMethod: GET | RequestQuery: [] | RequestContentLength: null | RequestContentType: null | User: { IsAuthenticated = False, AuthenticationType = , UserName =  } | MachineName: LAPTOP-65MSIL4C | ElapsedMilliseconds: 21 | Spinka.Api.Middlewares.LoggerMiddleware
+ An exception was thrown while attempting to evaluate a LINQ query parameter expression. To show additional information call EnableSensitiveDataLogging() when overriding DbContext.OnConfiguring.
+2021-07-27 10:59:51 | Error | CorrelationId: dddcefc7-bc45-4648-9009-8d7f6ec2a7d5 | RequestId: 0HMAGRJ9CD9CH:00000005 | RequestPath: /api/EduBlock | RequestMethod: GET | RequestQuery: [] | RequestContentLength: null | RequestContentType: null | User: { IsAuthenticated = False, AuthenticationType = , UserName =  } | MachineName: LAPTOP-65MSIL4C | ElapsedMilliseconds: 25 | Spinka.Api.Middlewares.LoggerMiddleware
+ An exception was thrown while attempting to evaluate a LINQ query parameter expression. To show additional information call EnableSensitiveDataLogging() when overriding DbContext.OnConfiguring.
+2021-07-27 11:01:08 | Error | CorrelationId: 1a6f2198-a9da-48be-82d6-e37897ce53b8 | RequestId: 0HMAGRK61FISH:00000001 | RequestPath: /api/EduBlock | RequestMethod: GET | RequestQuery: [] | RequestContentLength: null | RequestContentType: null | User: { IsAuthenticated = False, AuthenticationType = , UserName =  } | MachineName: LAPTOP-65MSIL4C | ElapsedMilliseconds: 11619 | Spinka.Api.Middlewares.LoggerMiddleware
+ A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+2021-07-27 11:01:09 | Error | CorrelationId: d74fb02d-1193-4a17-85eb-86a52793556c | RequestId: 0HMAGRK61FISH:00000003 | RequestPath: /api/EduBlock | RequestMethod: GET | RequestQuery: [] | RequestContentLength: null | RequestContentType: null | User: { IsAuthenticated = False, AuthenticationType = , UserName =  } | MachineName: LAPTOP-65MSIL4C | ElapsedMilliseconds: 25 | Spinka.Api.Middlewares.LoggerMiddleware
+ A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+2021-07-27 11:01:11 | Error | CorrelationId: cfc21477-410b-4600-a8da-d68723536a54 | RequestId: 0HMAGRK61FISH:00000005 | RequestPath: /api/EduBlock | RequestMethod: GET | RequestQuery: [] | RequestContentLength: null | RequestContentType: null | User: { IsAuthenticated = False, AuthenticationType = , UserName =  } | MachineName: LAPTOP-65MSIL4C | ElapsedMilliseconds: 7 | Spinka.Api.Middlewares.LoggerMiddleware
+ A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+2021-07-27 11:01:31 | Error | CorrelationId: 3d778324-6612-443a-9b69-16947574c005 | RequestId: 0HMAGRK61FISH:00000007 | RequestPath: /api/EduBlock | RequestMethod: GET | RequestQuery: [] | RequestContentLength: null | RequestContentType: null | User: { IsAuthenticated = False, AuthenticationType = , UserName =  } | MachineName: LAPTOP-65MSIL4C | ElapsedMilliseconds: 14664 | Spinka.Api.Middlewares.LoggerMiddleware
+ A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+2021-07-27 11:02:21 | Information | CorrelationId: cae8fd45-28c2-4401-8758-6d0eb23f35b2 | RequestId: 0HMAGRKV23QL6:00000001 | RequestPath: /api/EduBlock | RequestMethod: GET | RequestQuery: [] | RequestContentLength: null | RequestContentType: null | User: { IsAuthenticated = False, AuthenticationType = , UserName =  } | MachineName: LAPTOP-65MSIL4C | ElapsedMilliseconds: 498 | Spinka.Api.Middlewares.LoggerMiddleware
+ Request completed
+2021-07-27 11:15:20 | Error | CorrelationId: a17a8535-eeda-49c2-8ed7-081c0f3abfe2 | RequestId: 0HMAGRS75D9EJ:00000001 | RequestPath: /api/EduBlock | RequestMethod: GET | RequestQuery: [] | RequestContentLength: null | RequestContentType: null | User: { IsAuthenticated = False, AuthenticationType = , UserName =  } | MachineName: LAPTOP-65MSIL4C | ElapsedMilliseconds: 359 | Spinka.Api.Middlewares.LoggerMiddleware
+ An exception was thrown while attempting to evaluate a LINQ query parameter expression. To show additional information call EnableSensitiveDataLogging() when overriding DbContext.OnConfiguring.
+2021-07-27 11:18:46 | Error | CorrelationId: d8af65c5-c060-491a-995c-4470ca47d5bc | RequestId: 0HMAGRU4ONSD5:00000001 | RequestPath: /api/EduBlock | RequestMethod: GET | RequestQuery: [] | RequestContentLength: null | RequestContentType: null | User: { IsAuthenticated = False, AuthenticationType = , UserName =  } | MachineName: LAPTOP-65MSIL4C | ElapsedMilliseconds: 30 | Spinka.Api.Middlewares.LoggerMiddleware
+ Unable to resolve service for type 'AutoMapper.IMapper' while attempting to activate 'Spinka.Application.EduBlocks.Queries.Handlers.GetEduBlocksQueryHandler'.
+2021-07-27 11:20:49 | Error | CorrelationId: e6e39b8f-2062-494b-8860-a82af4cfada3 | RequestId: 0HMAGRV982F93:00000001 | RequestPath: /api/EduBlock | RequestMethod: GET | RequestQuery: [] | RequestContentLength: null | RequestContentType: null | User: { IsAuthenticated = False, AuthenticationType = , UserName =  } | MachineName: LAPTOP-65MSIL4C | ElapsedMilliseconds: 207 | Spinka.Api.Middlewares.LoggerMiddleware
+ Unable to resolve service for type 'AutoMapper.IMapper' while attempting to activate 'Spinka.Application.EduBlocks.Queries.Handlers.GetEduBlocksQueryHandler'.
+2021-07-27 11:20:55 | Error | CorrelationId: 416870b5-6811-4cb7-af80-53095ce6824f | RequestId: 0HMAGRV982F93:00000003 | RequestPath: /api/EduBlock | RequestMethod: GET | RequestQuery: [] | RequestContentLength: null | RequestContentType: null | User: { IsAuthenticated = False, AuthenticationType = , UserName =  } | MachineName: LAPTOP-65MSIL4C | ElapsedMilliseconds: 86 | Spinka.Api.Middlewares.LoggerMiddleware
+ Unable to resolve service for type 'AutoMapper.IMapper' while attempting to activate 'Spinka.Application.EduBlocks.Queries.Handlers.GetEduBlocksQueryHandler'.
+2021-07-27 11:21:10 | Error | CorrelationId: 5eeb9fbf-d18d-4726-a0c5-2ab501fa7b60 | RequestId: 0HMAGRV982F93:00000005 | RequestPath: /api/EduBlock | RequestMethod: GET | RequestQuery: [] | RequestContentLength: null | RequestContentType: null | User: { IsAuthenticated = False, AuthenticationType = , UserName =  } | MachineName: LAPTOP-65MSIL4C | ElapsedMilliseconds: 79 | Spinka.Api.Middlewares.LoggerMiddleware
+ Unable to resolve service for type 'AutoMapper.IMapper' while attempting to activate 'Spinka.Application.EduBlocks.Queries.Handlers.GetEduBlocksQueryHandler'.
+2021-07-27 11:28:21 | Error | CorrelationId: de2c5a84-2dd7-4676-b5ac-23976c8899f1 | RequestId: 0HMAGS3EQJCTI:00000001 | RequestPath: /api/EduBlock | RequestMethod: GET | RequestQuery: [] | RequestContentLength: null | RequestContentType: null | User: { IsAuthenticated = False, AuthenticationType = , UserName =  } | MachineName: LAPTOP-65MSIL4C | ElapsedMilliseconds: 3743 | Spinka.Api.Middlewares.LoggerMiddleware
+ A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+2021-07-27 11:28:57 | Information | CorrelationId: a3a6819e-5595-475f-89fe-3f1b7a04e84e | RequestId: 0HMAGS3QPNO37:00000001 | RequestPath: /api/EduBlock | RequestMethod: GET | RequestQuery: [] | RequestContentLength: null | RequestContentType: null | User: { IsAuthenticated = False, AuthenticationType = , UserName =  } | MachineName: LAPTOP-65MSIL4C | ElapsedMilliseconds: 384 | Spinka.Api.Middlewares.LoggerMiddleware
+ Request completed
+2021-07-27 11:29:14 | Error | CorrelationId: d711565b-84fc-4b03-916d-0d983e24ff6f | RequestId: 0HMAGS3QPNO37:00000003 | RequestPath: /api/EduBlock | RequestMethod: POST | RequestQuery: [] | RequestContentLength: 690 | RequestContentType: application/json | User: { IsAuthenticated = False, AuthenticationType = , UserName =  } | MachineName: LAPTOP-65MSIL4C | ElapsedMilliseconds: 359 | Spinka.Api.Middlewares.LoggerMiddleware
+ An error occurred while updating the entries. See the inner exception for details.
+2021-07-27 11:29:31 | Information | CorrelationId: f591f631-380b-4e8d-9b7c-0f68a1ae8e8b | RequestId: 0HMAGS3QPNO37:00000005 | RequestPath: /api/EduBlock | RequestMethod: GET | RequestQuery: [] | RequestContentLength: null | RequestContentType: null | User: { IsAuthenticated = False, AuthenticationType = , UserName =  } | MachineName: LAPTOP-65MSIL4C | ElapsedMilliseconds: 12 | Spinka.Api.Middlewares.LoggerMiddleware
+ Request completed
+2021-07-27 11:29:42 | Information | CorrelationId: 6558fb74-f684-4d1a-8759-2d9f6317b330 | RequestId: 0HMAGS3QPNO37:00000007 | RequestPath: /api/TrainingLog/ByGroupId | RequestMethod: POST | RequestQuery: [] | RequestContentLength: 87 | RequestContentType: application/json | User: { IsAuthenticated = False, AuthenticationType = , UserName =  } | MachineName: LAPTOP-65MSIL4C | ElapsedMilliseconds: 118 | Spinka.Api.Middlewares.LoggerMiddleware
+ Request completed
+2021-07-27 11:29:56 | Information | CorrelationId: 88e245b2-5b53-4543-bc9b-ce7b6a428680 | RequestId: 0HMAGS3QPNO37:00000009 | RequestPath: /api/TrainingLog/ByEduBlock/3 | RequestMethod: GET | RequestQuery: [] | RequestContentLength: null | RequestContentType: null | User: { IsAuthenticated = False, AuthenticationType = , UserName =  } | MachineName: LAPTOP-65MSIL4C | ElapsedMilliseconds: 31 | Spinka.Api.Middlewares.LoggerMiddleware
+ Request completed
+2021-07-27 11:35:11 | Information | CorrelationId: 82cde0c7-7f6b-4551-b205-a887026ac88d | RequestId: 0HMAGS3QPNO39:00000001 | RequestPath: /api/EduBlock/Cancel | RequestMethod: PUT | RequestQuery: [] | RequestContentLength: 37 | RequestContentType: application/json | User: { IsAuthenticated = False, AuthenticationType = , UserName =  } | MachineName: LAPTOP-65MSIL4C | ElapsedMilliseconds: 90 | Spinka.Api.Middlewares.LoggerMiddleware
+ Request completed
+2021-07-27 16:42:42 | Information | CorrelationId: 977cc2b6-625f-44a1-b968-526c9b85a34f | RequestId: 0HMAH1J56HEIV:00000001 | RequestPath: /api/TrainingLog/ByEduBlock/3 | RequestMethod: GET | RequestQuery: [] | RequestContentLength: null | RequestContentType: null | User: { IsAuthenticated = False, AuthenticationType = , UserName =  } | MachineName: LAPTOP-65MSIL4C | ElapsedMilliseconds: 141 | Spinka.Api.Middlewares.LoggerMiddleware
+ Request completed
+2021-07-27 16:56:10 | Information | CorrelationId: 3c8497f1-36e6-4246-a0e1-1db75e4be716 | RequestId: 0HMAH1QLOIMM4:00000001 | RequestPath: /api/TrainingLog/ByEduBlock/3 | RequestMethod: GET | RequestQuery: [] | RequestContentLength: null | RequestContentType: null | User: { IsAuthenticated = False, AuthenticationType = , UserName =  } | MachineName: LAPTOP-65MSIL4C | ElapsedMilliseconds: 205 | Spinka.Api.Middlewares.LoggerMiddleware
+ Request completed
+2021-07-27 16:56:50 | Information | CorrelationId: 6cc74ade-9600-4058-a53f-81c49efe8cf0 | RequestId: 0HMAH1QLOIMM4:00000003 | RequestPath: /api/TrainingLog/ByEduBlock/3 | RequestMethod: GET | RequestQuery: [] | RequestContentLength: null | RequestContentType: null | User: { IsAuthenticated = False, AuthenticationType = , UserName =  } | MachineName: LAPTOP-65MSIL4C | ElapsedMilliseconds: 44 | Spinka.Api.Middlewares.LoggerMiddleware
+ Request completed
+2021-07-27 16:56:51 | Information | CorrelationId: ef526499-576c-4380-8645-5a14a6c3851a | RequestId: 0HMAH1QLOIMM4:00000005 | RequestPath: /api/TrainingLog/ByEduBlock/3 | RequestMethod: GET | RequestQuery: [] | RequestContentLength: null | RequestContentType: null | User: { IsAuthenticated = False, AuthenticationType = , UserName =  } | MachineName: LAPTOP-65MSIL4C | ElapsedMilliseconds: 40 | Spinka.Api.Middlewares.LoggerMiddleware
+ Request completed
+2021-07-27 16:57:23 | Information | CorrelationId: 40785e09-c1ca-48e8-b536-928f414d5905 | RequestId: 0HMAH1QLOIMM4:00000007 | RequestPath: /api/TrainingLog/ByEduBlock/3 | RequestMethod: GET | RequestQuery: [] | RequestContentLength: null | RequestContentType: null | User: { IsAuthenticated = False, AuthenticationType = , UserName =  } | MachineName: LAPTOP-65MSIL4C | ElapsedMilliseconds: 26 | Spinka.Api.Middlewares.LoggerMiddleware
+ Request completed
+2021-07-27 16:58:11 | Information | CorrelationId: 62ef7613-84e0-4f4a-9527-fc92498ed097 | RequestId: 0HMAH1QLOIMM4:00000009 | RequestPath: /api/TrainingLog/ByEduBlock/3 | RequestMethod: GET | RequestQuery: [] | RequestContentLength: null | RequestContentType: null | User: { IsAuthenticated = False, AuthenticationType = , UserName =  } | MachineName: LAPTOP-65MSIL4C | ElapsedMilliseconds: 33808 | Spinka.Api.Middlewares.LoggerMiddleware
+ Request completed
+2021-07-27 17:06:06 | Information | CorrelationId: a9910e42-cbe4-4333-8b77-0297d12745f2 | RequestId: 0HMAH1VO3UPC6:00000001 | RequestPath: /api/TrainingLog/ByEduBlock/3 | RequestMethod: GET | RequestQuery: [] | RequestContentLength: null | RequestContentType: null | User: { IsAuthenticated = False, AuthenticationType = , UserName =  } | MachineName: LAPTOP-65MSIL4C | ElapsedMilliseconds: 51683 | Spinka.Api.Middlewares.LoggerMiddleware
+ Request completed
+2021-07-27 22:07:23 | Fatal | CorrelationId:  | RequestId:  | RequestPath:  | RequestMethod:  | RequestQuery:  | RequestContentLength:  | RequestContentType:  | User:  | MachineName:  | ElapsedMilliseconds:  | Microsoft.AspNetCore.Hosting.Diagnostics
+ Application startup exception
+System.AggregateException: One or more errors occurred. (An error occurred while updating the entries. See the inner exception for details.)
+ ---> Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The MERGE statement conflicted with the FOREIGN KEY constraint "FK_DayReps_DayRepGroupPersons_DayRepGroupPersonId". The conflict occurred in database "Spinka", table "dbo.DayRepGroupPersons", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__164_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__274_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:b768124a-8314-4df1-92a6-6c41e198191d
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Spinka.Infrastructure.Database.DatabaseInitializer.SeedData(SpinkaContext context) in C:\Users\snoww\Documents\GitHub\Spinka\spinka_backend\spinka\src\Spinka.Infrastructure\Database\DatabaseInitializer.cs:line 187
+   at Spinka.Infrastructure.Database.DatabaseInitializer.PrepPopulation(IApplicationBuilder app) in C:\Users\snoww\Documents\GitHub\Spinka\spinka_backend\spinka\src\Spinka.Infrastructure\Database\DatabaseInitializer.cs:line 20
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at Spinka.Api.Startup.Configure(IApplicationBuilder app, IWebHostEnvironment env) in C:\Users\snoww\Documents\GitHub\Spinka\spinka_backend\spinka\src\Spinka.Api\Startup.cs:line 62
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.Invoke(Object instance, IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.<>c__DisplayClass4_0.<Build>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostBuilder.<>c__DisplayClass13_0.<UseStartup>b__2(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Mvc.Filters.MiddlewareFilterBuilderStartupFilter.<>c__DisplayClass0_0.<Configure>g__MiddlewareFilterBuilder|0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.HostFilteringStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+2021-07-27 22:23:42 | Information | CorrelationId: ebbc1ccd-dc4d-4882-971a-91e2e429b844 | RequestId: 0HMAH7HMG0631:00000001 | RequestPath: /api/TrainingGroup/1 | RequestMethod: GET | RequestQuery: [] | RequestContentLength: null | RequestContentType: null | User: { IsAuthenticated = False, AuthenticationType = , UserName =  } | MachineName: LAPTOP-65MSIL4C | ElapsedMilliseconds: 579 | Spinka.Api.Middlewares.LoggerMiddleware
+ Request completed
+2021-07-27 22:25:16 | Information | CorrelationId: a63b9a3e-1513-4251-9e62-0144f44d1fa5 | RequestId: 0HMAH7HMG0631:00000003 | RequestPath: /api/TrainingGroup/1 | RequestMethod: GET | RequestQuery: [] | RequestContentLength: null | RequestContentType: null | User: { IsAuthenticated = False, AuthenticationType = , UserName =  } | MachineName: LAPTOP-65MSIL4C | ElapsedMilliseconds: 294 | Spinka.Api.Middlewares.LoggerMiddleware
+ Request completed
+2021-07-27 22:27:18 | Information | CorrelationId: 23dc1ab9-fab1-412d-9673-b3c62c8b62c1 | RequestId: 0HMAH7HMG0633:00000001 | RequestPath: /api/TrainingLog/ByEduBlock/3 | RequestMethod: GET | RequestQuery: [] | RequestContentLength: null | RequestContentType: null | User: { IsAuthenticated = False, AuthenticationType = , UserName =  } | MachineName: LAPTOP-65MSIL4C | ElapsedMilliseconds: 43 | Spinka.Api.Middlewares.LoggerMiddleware
+ Request completed
+2021-07-27 22:27:26 | Information | CorrelationId: b6068366-95d3-40f6-93a8-612eacf37878 | RequestId: 0HMAH7HMG0633:00000003 | RequestPath: /api/TrainingLog/ByEduBlock/4 | RequestMethod: GET | RequestQuery: [] | RequestContentLength: null | RequestContentType: null | User: { IsAuthenticated = False, AuthenticationType = , UserName =  } | MachineName: LAPTOP-65MSIL4C | ElapsedMilliseconds: 2632 | Spinka.Api.Middlewares.LoggerMiddleware
+ Request completed

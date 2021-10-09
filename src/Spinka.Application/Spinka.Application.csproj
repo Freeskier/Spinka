@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Spinka.Domain\Spinka.Domain.csproj" />
+    <ProjectReference Include="..\Spinka.Infrastructure\Spinka.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="default\Commands\Handlers\" />
+    <Folder Include="default\Mappers\" />
+    <Folder Include="default\Queries\Handlers\" />
+    <Folder Include="default\ViewModels\" />
+    <Folder Include="TrainingGroupsPerson\Mappers" />
+    <Folder Include="TrainingGroupsPerson\Queries" />
+    <Folder Include="TrainingGroupsPerson\ViewModels" />
+    <Folder Include="TrainingLogs\Commands" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+    <PackageReference Include="Dapper" Version="2.0.90" />
+    <PackageReference Include="DinkToPdf" Version="1.0.8" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="3.1.6" />
+    <PackageReference Include="sautinsoft.htmltortf" Version="8.1.6.7" />
+  </ItemGroup>
+
+</Project>
